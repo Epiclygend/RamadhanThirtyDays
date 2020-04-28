@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Epiclygend/Animation/RamadhanThirtyDays/styles/compiled/4.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/specimen/Montserrat?query=mon&sidebar.open&selection.family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900|Open+Sans:wght@300;400;600;700;800 -->
+    <title>Day#4</title>
+</head>
+
+<body>
+    <div id="canvas">
+        <span class="tagline">
+            <span>#INSPRD_7</span> X <span>epiclygend</span>
+        </span>
+        <div class="animation">
+            <h1
+                id="greetings"
+                class="f-w:400"
+                style="
+                    font-size: 3rem;
+                    transform: translateX(-2.5em);
+                "
+                >hei!
+            </h1>
+            <h1
+                id="smile"
+                class="f:montserrat f-w:900 italic"
+                style="
+                    margin: 0 .5em;
+                    font-size: 4rem;
+                    text-shadow: 0 5px 10px #0008, 0 8px 20px #0002;
+                    transform: translateY(-1em);
+                "
+                >Senyum dong!
+            </h1>
+            <span
+                id="hehe"
+                class="f:montserrat f-w:800 italic"
+                style="
+                    font-size: 2rem;
+                    transform: translateX(3em);
+                "
+                >Hehe
+            </span>
+            <blockquote
+                id="quotes"
+                class="f-w:600"
+            >
+                Tetaplah tersenyum, karena senyuman adalah kebaikan pertama yang paling mudah diterima oleh orang lain
+                <span
+                    id="shoffan"
+                    class="author f-w:500 italic"
+                >
+                    - Shoffan Mujahid
+                </span>
+            </blockquote>
+            <blockquote
+                id="hadist"
+                class="f-w:600"
+            >
+                "Senyummu di depan saudaramu, adalah sedekah"
+                <span
+                    id="perawi"
+                    class="author f-w:500 italic"
+                >
+                    (Sahih, H.R. Tirmidzi no 1956)
+                </span>
+            </blockquote>
+        </div>
+        <span id="exitFull"
+            style="
+                background-color: #fff;
+                border-radius: 50%;
+                padding: 20px;
+                width: calc(20px + 1em);   
+                height: calc(20px + 1em);   
+        ">X</span>
+    </div>
+</body>
+
+<script src="/Epiclygend/Animation/anime/lib/anime.min.js"></script>
+
+<script>
+
+    let animate = anime.timeline({
+        duration: 200,
+        autoplay: false
+    })
+    .add({
+        targets: '#greetings',
+        opacity: [0,1],
+        translateY: ['calc(-2.5em + 40px)','calc(-2.5em + 0px)'],
+        easing: 'spring(3,80,10,2)',
+        delay: 2000
+    })
+    .add({
+        targets: '#greetings',
+        opacity: 0,
+        easing: 'easeInQuad'
+    })
+    .add({
+        targets: '#smile',
+        opacity: [0,1],
+        scale: [0,1],
+        easing: 'easeOutElastic'
+    })
+    .add({
+        targets: '#smile',
+        opacity: 0,
+        scale: 0,
+        easing: 'easeOutElastic',
+        delay: 3000
+    })
+    .add({
+        targets: '#hehe',
+        opacity: [0,1],
+        translateY: ['9em','7em'],
+        duration: 1000
+    })
+    .add({
+        targets: '#hehe',
+        opacity: 0
+    })
+    .add({
+        targets: '#quotes',
+        opacity: [0,1],
+        translateY: ['1em','0em'],
+        translateX: '-.5em',
+        duration: 2000
+    })
+    .add({
+        targets: '#shoffan',
+        opacity: [0,1],
+        translateX: ['-1em','-0.5em'],
+        delay: 500,
+        duration: 2000
+    })
+    .add({
+        targets: '#quotes',
+        opacity: 0,
+        delay: 3000,
+        duration: 1000
+    })
+    .add({
+        targets: '#hadist',
+        opacity: [0,1],
+        translateY: ['1em','0em'],
+        translateX: '-.5em',
+        duration: 2000
+    })
+    .add({
+        targets: '#perawi',
+        opacity: [0,1],
+        translateX: ['-1em','-0.5em'],
+        delay: 500,
+        duration: 2000
+    })
+    .add({
+        targets: '#exitFull',
+        translateY: '-10%',
+        opacity: [0,1],
+        delay: 5000
+    })
+
+    const
+        canvas = document.querySelector('div#canvas'),
+        exitFull = document.querySelector('span#exitFull')
+
+    canvas.addEventListener('click', e => {
+        if(!(e.target === exitFull)) {
+            animate.play()
+            document.querySelector('div#canvas').requestFullscreen()
+        }
+    })
+    exitFull.addEventListener('click', () => document.exitFullscreen())
+</script>
+
+</html>
