@@ -1,0 +1,45 @@
+$font-primary: "Pacifico", cursive;
+
+$color_bg-base: #000;
+$color_font-base: #fff;
+
+@import "global";
+
+#canvas {
+    cursor: pointer;
+    background: url("#{$path-base}assets/food.jpg");
+    background-size: cover;
+    background-position-x: right;
+}
+
+div.animation {
+    
+    * {
+        text-align: center;
+    }
+}
+
+#bismillah {
+    top: 1em;
+    font-size: 5rem;
+    font-weight: 100;
+    text-shadow:
+        0.15em 0.15em 0.1em #0006,
+        0.05em 0.05em 0.5em #888a;
+}
+
+#penguat {
+    top: 16rem;
+    margin: .01em;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.7rem;
+    text-shadow:
+        0.15em 0.15em 0.1em #0006,
+        0.2em 0.2em 0.4em #888;
+}
+
+#fromAhli {
+    top: 22rem;
+    padding: 1.5em;
+    background-color: #fff3;
+}

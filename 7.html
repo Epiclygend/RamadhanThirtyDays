@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/compiled/7.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>#7</title>
+</head>
+<body>
+    
+    <div id="canvas">
+
+        <span class="tagline">
+            <span>#INSPRD_07</span> X <span>epiclygend</span>
+        </span>
+
+        <div class="animation">
+            
+            <h1 id="bismillah">Bismillah</h1>
+
+            <span id="penguat">
+            "Apapun aktifitasmu, awali segalanya dengan bismillah"
+            </span>
+
+            <span id="fromAhli" class="f:open-sans">
+                Dalam Al-Mawsu’ah Al-Fiqhiyyah (8: 92) dinyatakan, para fuqaha sepakat bahwa membaca bismillah disyari’atkan untuk (memulai) setiap perkara penting, untuk hal ibadah atau lainnya.
+            </span>
+
+        </div>
+        
+        <span class="attributions">
+            <span class="f:open-sans">
+                Food photo created by valeria_aksakova - freepik.com
+            </span>
+            <span class="f:open-sans">
+                Bismillah - Awan Voices
+            </span>
+        </span>
+        
+        <span id="exitFull"
+            style="
+                background-color: #fff;
+                border-radius: 50%;
+                padding: 20px;
+                width: calc(20px + 1em);   
+                height: calc(20px + 1em);   
+        ">X</span>
+
+    </div>
+
+</body>
+
+<script src="/Epiclygend/Animation/anime/lib/anime.min.js"></script>
+<script>
+
+    const animate = anime.timeline({
+        autoplay: false
+    })
+    .add({
+        targets: '#bismillah',
+        scale: [0,1],
+        delay: 2000,
+        duration: 50,
+        easing: 'spring(1,80,10,1)'
+    })
+    .add({
+        targets: '#bismillah',
+        scale: [
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50},
+            {value: .9, delay: -50},
+            {value: 1, delay: -50}
+        ],
+        duration: 12000
+    })
+    .add({
+        targets: '#penguat',
+        opacity: [0,1],
+        delay: 2000,
+        duration: 4000
+    })
+    .add({
+        targets: '#fromAhli',
+        opacity: [0,1],
+        translateX: ['100%',0],
+        delay: 1000,
+        duration: 2000,
+        easing: 'easeInOutElastic'
+    })
+    .add({
+        targets: '#exitFull',
+        translateY: '-10%',
+        opacity: [0,1],
+        delay: 5000
+    })
+
+    const
+        canvas = document.querySelector('div#canvas'),
+        exitFull = document.querySelector('span#exitFull')
+
+    canvas.addEventListener('click', e => {
+        if(!(e.target === exitFull)) {
+            animate.play()
+            canvas.requestFullscreen()
+        }
+    })
+    exitFull.addEventListener('click', () => document.exitFullscreen())
+
+</script>
+</html>

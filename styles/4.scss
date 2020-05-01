@@ -10,36 +10,3 @@
     background-size: cover;
     background-position-x: right;
 }
-
-div.animation {
-    height: 60%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    * {
-        position: absolute;
-    }
-}
-
-blockquote {
-    margin: 1em;
-    text-align: center;
-    font-size: 2rem;
-    text-shadow: 3px 0px .25em aliceblue,
-                -3px 0px .25em aliceblue,
-                6px 0px .5em aliceblue,
-                -6px 0px .5em aliceblue;
-
-    span.author {
-        display: block;
-        bottom: -2em;
-        right: 1em;
-        text-align: right;
-        padding: .1em .6em;
-        font-size: 1rem;
-        color: #000;
-        background-color: #fffd;
-    }
-}
