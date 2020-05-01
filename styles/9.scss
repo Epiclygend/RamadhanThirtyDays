@@ -1,0 +1,65 @@
+$color_font-base: #fff;
+
+@import 'global';
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+
+div#canvas {
+    cursor: pointer;
+    background: url("#{$path-base}assets/explosion.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#intro {
+    top: 7em;
+    width: 100vw;
+    font-size: 1.4rem;
+    text-shadow: 0.1em 0.1em #000;
+}
+
+#then {
+    font-size: 4rem;
+    text-shadow: 1px 1px #222, 2px 2px #222, 3px 3px #222, 4px 4px #222, 5px 5px #222, 6px 6px #222, 5px 6px #222, 4px 5px #222, 3px 4px #222, 2px 3px #222, 1px 2px #222;
+    
+    @supports (-webkit-text-stroke: 2px #222) {
+        -webkit-text-stroke: 2px #222;
+        -webkit-text-fill-color: #fff;
+    }
+}
+
+#core {
+    font-size: 1.3rem;
+    color: #ff1;
+    text-shadow: 
+        1px 0px 0.1em #333,
+        -1px 0px 0.1em #bbb,
+        2px 0px 0.2em #333,
+        -2px 0px 0.2em #bbb;
+    
+    * {
+        color: inherit;
+    }
+}
+
+#reflection {
+    bottom: -6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+blockquote {
+    width: 100%;
+    margin: auto;
+}
+
+.boxed {
+    padding: 1.2em;
+    background-color: #0004;
+}
+
+.f\: {
+    &heebo { font-family: 'Heebo', sans-serif; }
+    &arial\-rounded { font-family: 'Arial Rounded MT', sans-serif; }
+}

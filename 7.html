@@ -39,22 +39,14 @@
             </span>
         </span>
         
-        <span id="exitFull"
-            style="
-                background-color: #fff;
-                border-radius: 50%;
-                padding: 20px;
-                width: calc(20px + 1em);   
-                height: calc(20px + 1em);   
-        ">X</span>
+        <span id="exitFull">X</span>
 
     </div>
 
 </body>
+<script src="./js/anime.min.js"></script>
 
-<script src="/Epiclygend/Animation/anime/lib/anime.min.js"></script>
 <script>
-
     const animate = anime.timeline({
         autoplay: false
     })
@@ -151,18 +143,7 @@
         opacity: [0,1],
         delay: 5000
     })
-
-    const
-        canvas = document.querySelector('div#canvas'),
-        exitFull = document.querySelector('span#exitFull')
-
-    canvas.addEventListener('click', e => {
-        if(!(e.target === exitFull)) {
-            animate.play()
-            canvas.requestFullscreen()
-        }
-    })
-    exitFull.addEventListener('click', () => document.exitFullscreen())
-
 </script>
+
+<script src="./js/main.js"></script>
 </html>

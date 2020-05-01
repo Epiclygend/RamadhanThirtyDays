@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/compiled/9.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="canvas">
+
+        <span class="tagline">
+            <span>#INSPRD_07</span> X <span>epiclygend</span>
+        </span>
+
+        <div class="animation">
+
+            <span id="intro" class="boxed">
+                Bahwasanya setelah hari kiamat Allah memerintahkan malaikat maut untuk mencabut nyawa sendiri
+            </span>
+
+            <span id="then" class="f:heebo">
+                Kemudian
+            </span>
+
+            <blockquote id="core" class="f:arial-rounded boxed">
+                Dalam Ash-shahihin dari Hadist az-Zuhri, dari Abu Salamah, dari Abu Hurairah, bahwa Rasulullah SAW
+                bersabda, "Allah memegang bumi dan melipat langit dengan tangan kanan-Nya lalu berfirman: 'Aku Raja, Aku
+                Mahaperkasa, dimanakah para raja bumi? Dimanakah orang-orang perkasa? Dimanakah orang-orang sombong?'"
+                <br>
+                <b style="
+                        text-align: center;
+                        display: block;
+                        width: 100%;
+                    ">(HR. Bukhari dan Muslim)</b>
+            </blockquote>
+
+            <blockquote id="reflection" class="boxed">
+                Maka, sudah sepatutnya kita sebagai makhluk Allah untuk tidak berbuat sombong di muka bumi ini dan
+                ingatlah bahwa Allah-lah yang Maha Kuasa dan Maha Segalanya
+            </blockquote>
+
+        </div>
+
+        <span class="attributions">
+            <span style="color: #fff;">Song: Iman - Ahmad Dhani (Sintesa Cover)
+            </span>
+        </span>
+
+        <span id="exitFull">X</span>
+
+    </div>
+
+</body>
+<script src="./js/anime.min.js"></script>
+
+<script>
+
+    const animate = anime.timeline({
+        autoplay: false
+    })
+        .add({
+            targets: '#intro',
+            keyframes: [
+                {
+                    opacity: [0, 1],
+                    duration: 2000,
+                    easing: 'linear'
+                },
+                {
+                    translateY: '-1em',
+                    delay: 4000,
+                    easing: 'easeOutExpo'
+                },
+                {
+                    scale: 0,
+                    duration: 300
+                }
+            ],
+            delay: 2000
+        })
+        .add({
+            targets: '#then',
+            keyframes: [
+                {
+                    opacity: [0, 1],
+                    translateY: ['4em', '4em'],
+                    duration: 200
+                },
+                {
+                    translateY: ['4em', '0em'],
+                    duration: 200,
+                    easing: 'easeInOutCirc'
+                },
+                {
+                    opacity: 0,
+                    delay: 3000
+                }
+            ]
+        }, '-=1250')
+        .add({
+            targets: '#core',
+            opacity: [0, 1],
+            duration: 2000,
+            easing: 'easeInOutSine'
+        })
+        .add({
+            targets: '#reflection',
+            opacity: [0, 1],
+            delay: 3000,
+            duration: 2000,
+            easing: 'easeInOutSine'
+        })
+</script>
+
+<script src="./js/main.js"></script>
+</html>
